@@ -5,3 +5,5 @@
 #
 # Debug configuration
 # Release configuration
+# Release_Windows configuration
+# Debug_Windows configuration

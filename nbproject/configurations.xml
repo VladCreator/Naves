@@ -5,12 +5,12 @@
                    displayName="Header Files"
                    projectFiles="true">
       <itemPath>Frame.h</itemPath>
-      <itemPath>Nave.bmp</itemPath>
       <itemPath>Sprite.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
                    projectFiles="true">
+      <itemPath>Nave.bmp</itemPath>
     </logicalFolder>
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
@@ -35,11 +35,19 @@
   <confs>
     <conf name="Debug" type="1">
       <toolsSet>
-        <compilerSet>default</compilerSet>
+        <compilerSet>GNU|GNU</compilerSet>
         <dependencyChecking>true</dependencyChecking>
         <rebuildPropChanged>false</rebuildPropChanged>
       </toolsSet>
       <compileType>
+        <ccTool>
+          <incDir>
+            <pElem>/usr/include/SDL/</pElem>
+          </incDir>
+        </ccTool>
+        <linkerTool>
+          <commandLine>-lSDL</commandLine>
+        </linkerTool>
       </compileType>
       <item path="Frame.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -73,6 +81,68 @@
         <asmTool>
           <developmentMode>5</developmentMode>
         </asmTool>
+      </compileType>
+      <item path="Frame.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Frame.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Nave.bmp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Sprite.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Sprite.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release_Windows" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+      </compileType>
+      <item path="Frame.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Frame.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Nave.bmp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Sprite.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Sprite.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Debug_Windows" type="1">
+      <toolsSet>
+        <compilerSet>GNU|GNU</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <ccTool>
+          <incDir>
+            <pElem>/usr/include/SDL/</pElem>
+          </incDir>
+        </ccTool>
+        <linkerTool>
+          <commandLine>-lSDL</commandLine>
+        </linkerTool>
       </compileType>
       <item path="Frame.cpp" ex="false" tool="1" flavor2="0">
       </item>

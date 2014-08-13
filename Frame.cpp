@@ -1,6 +1,6 @@
 #include "Frame.h"
 #include "Sprite.h"
-#include <SDL.h>
+#include <SDL/SDL.h>
 
 void CFrame::load(char *path)
 {

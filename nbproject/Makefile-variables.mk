@@ -22,6 +22,22 @@ CND_ARTIFACT_PATH_Release=dist/Release/GNU-Linux-x86/naves
 CND_PACKAGE_DIR_Release=dist/Release/GNU-Linux-x86/package
 CND_PACKAGE_NAME_Release=naves.tar
 CND_PACKAGE_PATH_Release=dist/Release/GNU-Linux-x86/package/naves.tar
+# Release_Windows configuration
+CND_PLATFORM_Release_Windows=GNU-Linux-x86
+CND_ARTIFACT_DIR_Release_Windows=dist/Release_Windows/GNU-Linux-x86
+CND_ARTIFACT_NAME_Release_Windows=naves
+CND_ARTIFACT_PATH_Release_Windows=dist/Release_Windows/GNU-Linux-x86/naves
+CND_PACKAGE_DIR_Release_Windows=dist/Release_Windows/GNU-Linux-x86/package
+CND_PACKAGE_NAME_Release_Windows=naves.tar
+CND_PACKAGE_PATH_Release_Windows=dist/Release_Windows/GNU-Linux-x86/package/naves.tar
+# Debug_Windows configuration
+CND_PLATFORM_Debug_Windows=GNU-Linux-x86
+CND_ARTIFACT_DIR_Debug_Windows=dist/Debug_Windows/GNU-Linux-x86
+CND_ARTIFACT_NAME_Debug_Windows=naves
+CND_ARTIFACT_PATH_Debug_Windows=dist/Debug_Windows/GNU-Linux-x86/naves
+CND_PACKAGE_DIR_Debug_Windows=dist/Debug_Windows/GNU-Linux-x86/package
+CND_PACKAGE_NAME_Debug_Windows=naves.tar
+CND_PACKAGE_PATH_Debug_Windows=dist/Debug_Windows/GNU-Linux-x86/package/naves.tar
 #
 # include compiler specific variables
 #

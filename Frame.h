@@ -1,4 +1,4 @@
-#include <SDL.h>
+#include <SDL/SDL.h>
 
 #pragma once
 #ifndef CSPRITE_H_
