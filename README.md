@@ -1,4 +1,0 @@
-Naves
-=====
-
-Naves C++
