@@ -11,6 +11,7 @@
                    displayName="Resource Files"
                    projectFiles="true">
       <itemPath>../data/Nave.bmp</itemPath>
+      <itemPath>../log/readme.txt</itemPath>
     </logicalFolder>
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
@@ -51,6 +52,8 @@
       </compileType>
       <item path="../data/Nave.bmp" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="../log/readme.txt" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="../source/Frame.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="../source/Frame.h" ex="false" tool="3" flavor2="0">
@@ -83,6 +86,8 @@
         </asmTool>
       </compileType>
       <item path="../data/Nave.bmp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../log/readme.txt" ex="false" tool="3" flavor2="0">
       </item>
       <item path="../source/Frame.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -117,6 +122,8 @@
       </compileType>
       <item path="../data/Nave.bmp" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="../log/readme.txt" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="../source/Frame.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="../source/Frame.h" ex="false" tool="3" flavor2="0">
@@ -145,6 +152,8 @@
         </linkerTool>
       </compileType>
       <item path="../data/Nave.bmp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../log/readme.txt" ex="false" tool="3" flavor2="0">
       </item>
       <item path="../source/Frame.cpp" ex="false" tool="1" flavor2="0">
       </item>
