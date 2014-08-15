@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <SDL/SDL.h>
+#include <SDL.h>
 
 #define WIDTH 420
 #define HEIGHT 360
