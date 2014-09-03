@@ -5,3 +5,7 @@ proyecto/Naves_VC2010.suo
 *.sdf
 *.opensdf
 *.suo
+*.idb
+*.tlog
+*.lastbuildstate
+*.manifest
