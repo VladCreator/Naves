@@ -10,9 +10,9 @@
 
 class CFrame {
 
-    public:
+public:
 
-        SDL_Surface *img;
-        void load(char *path);
-        void unload();
+	SDL_Surface *img;
+	void load(char *path);
+	void unload();
 };
