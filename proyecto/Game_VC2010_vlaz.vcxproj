@@ -67,13 +67,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\source\Frame.cpp" />
-    <ClCompile Include="..\source\Game.cpp" />
     <ClCompile Include="..\Source\main.cpp" />
     <ClCompile Include="..\Source\sprite.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\source\Frame.h" />
-    <ClInclude Include="..\source\Game.h" />
     <ClInclude Include="..\Source\sprite.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
