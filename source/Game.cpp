@@ -98,6 +98,13 @@ void Game::Juego()
 		//Upnave.unload();
 		/*int H = Nave.geth();
 		int W = Nave.getw();*/
+
+		/*keys = SDL_GetKeyState(NULL);
+	
+	if(keys[SDLK_UP] && minave.y > 0){minave.y = minave.y - (1);}
+	if(keys[SDLK_DOWN] && minave.y < HEIGHT - H){minave.y = minave.y + (1);}
+	if(keys[SDLK_LEFT] && minave.x > 0) {minave.x = minave.x - (1);}
+	if(keys[SDLK_RIGHT] && minave.x <  WIDTH - W) {minave.x = minave.x + (1);}*/
 }
 void Game::Pintado()
 {
