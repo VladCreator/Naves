@@ -18,10 +18,10 @@ int W = 0;
 
 CFrame Upnave;
 CSprite Nave;
-
 struct nave{
 	int x,y;
 } minave;
+SDL_Event event;
 
 Game::Game(void){
 	Estado = INICIALIZACION;
@@ -32,35 +32,59 @@ Game::Game(void){
 
 Game::~Game(void){
 }
+void Game::Finalizacion()
+{
 
-void Game::Actualizado(){
-	SDL_Flip(screen);
 }
-
-void Game::Finalizacion(){
-}
-
 void Game::MotorEstados(){
 	//Estado es del enum 
-	while(Estado != FINALIZACION)//ACT4: Debe de existir un estado para esto y no el de FINALIZACION
+	while(Estado !=SALIR_MOTOR)//ACT4: Debe de existir un estado para esto y no el de FINALIZACION
 	{
+		//CORREGIDO
+		if(SDL_PollEvent(&event)) //ACT4: El SDL_PollEvent No debe de ir aqui, probablemente tu Teclado no te funcione, debe de ir en game. Ya que adentro tiene un segundo WHILE
+		{
+			if(event.type == SDL_QUIT) {
+				Estado = SALIR_MOTOR;
+			}
+		}
+
 		switch (Estado)
 		{///ACT4:  Se recomienda que pongas en order tus estados, primero INICIALIZACION y Luego JUEGO
-		case JUEGO:
-			getch(); //ACT4: Este GETCH aqui esta sobrando.
+			case INICIALIZACION:
+				Inicializacion();
+				Estado = JUEGO;//Correcto ya que cargas todo, aqui envias al estado JUEGO
 			break;
-		case INICIALIZACION:
-			Inicializacion();
-			Juego();//ACT4: Este juego ya no debe de ir aqui, debe de ir en su respectivo estado.
-			Estado = JUEGO;//Correcto ya que cargas todo, aqui envias al estado JUEGO
-			break;
+			case JUEGO:
+				//CORREGIDO
+				Juego();//ACT4: Este juego ya no debe de ir aqui, debe de ir en su respectivo estado.
+				while(Sub_Estado != SALIR)
+				{
+					switch (Sub_Estado)
+					{
+						case  PINTANDO:
+							Pintado();
+							 Sub_Estado = ACTUALIZANDO;
+							 break;
+						case ACTUALIZANDO:
+							Actualizado();
+							Sub_Estado = SALIR;
+							Estado = JUEGO;
+							break;
+					}
+					Sub_Estado = PINTANDO;
+				}
+				break;
 
+				case FINALIZACION:
+						Finalizacion();
+					break;
 		}
 	}
 
 } 
 
-void Game::Inicializacion(){
+void Game::Inicializacion()
+{
 	atexit(SDL_Quit);
 	if(SDL_Init(SDL_INIT_VIDEO) < 0)
 	{
@@ -69,24 +93,20 @@ void Game::Inicializacion(){
 	}
 	screen = SDL_SetVideoMode(WIDTH, HEIGHT, BPP, SDL_HWSURFACE);
 	//Cambiar Nombre de la Ventana
-	SDL_WM_SetCaption("Juego de Naves", "s");
+	SDL_WM_SetCaption("Space Wide", "s");
 	if(screen == NULL)
 	{
 		printf("No se ha podido establecer el modo de vídeo: %s\n", SDL_GetError());
 		exit(1);
 	}
-	if(image == NULL)//ACT4: ¨imagge¨Se necesita?
-	{
-		printf("No se ha podido cargar la imagen: %s\n",SDL_GetError());
-	}		
+	Upnave.load("Nave.bmp");		
 }
 
-void Game::Juego(){
-	minave.x = 50;//ACT4: Esto no debe de ir aqui, estas forzando siempre a esta posicion. En el constructor ya lo tienes.
-	minave.y = 10;
-	Nave.setx(minave.x);
+void Game::Juego()
+{
+		Nave.setx(minave.x);
 		Nave.sety(minave.y);
-		Upnave.load("Nave.bmp");//ACT4: En el Juego ya no se debe de cargar cosas, para eso esta el estado de INICIALIZACION
+		//Upnave.load("Nave.bmp");//ACT4: En el Juego ya no se debe de cargar cosas, para eso esta el estado de INICIALIZACION
 		Nave.addframe(Upnave);
 		Nave.draw(screen);
 		SDL_Flip(screen);
@@ -105,3 +125,18 @@ void Game::Pintado()
 {
 		
 }
+void Game::Actualizado(){
+	SDL_Flip(screen);
+}
+/*int getEstado()
+{
+	return Estado;
+}
+void SetEstado(int n)
+{
+	Estado = n;
+}
+int getFINALIZACION()
+{
+	return  FINALIZACION;
+}*/

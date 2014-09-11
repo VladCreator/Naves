@@ -1,16 +1,13 @@
-﻿Compilación iniciada a las 06/09/2014 22:33:20.
+﻿Compilación iniciada a las 10/09/2014 23:11:54.
      1>Proyecto "C:\Users\xdcl\Desktop\Nave4\Naves\proyecto\Game_VC2010.vcxproj" en el nodo 2 (build destinos).
      1>InitializeBuildStatus:
-         Se creará "Debug\Game_VC2010.unsuccessfulbuild" porque se especificó "AlwaysCreate".
+         Aplicando tarea Touch a "Debug\Game_VC2010.unsuccessfulbuild".
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /IC:\Users\xdcl\Desktop\Nave4\Naves\proyecto\\..\Librerias\sdl\include /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ..\source\Frame.cpp ..\source\Game.cpp ..\Source\main.cpp ..\Source\sprite.cpp
-         sprite.cpp
-         main.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /IC:\Users\xdcl\Desktop\Nave4\Naves\proyecto\\..\Librerias\sdl\include /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ..\Source\main.cpp ..\source\Game.cpp
          Game.cpp
-     1>c:\users\xdcl\desktop\nave4\naves\source\game.cpp(51): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _getch. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\conio.h(128) : vea la declaración de 'getch'
-         Frame.cpp
          Generando código...
+         Omitiendo... (no se detectaron cambios relevantes)
+         main.cpp
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\xdcl\Desktop\Nave4\Naves\proyecto\Debug\Game_VC2010.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:C:\Users\xdcl\Desktop\Nave4\Naves\proyecto\\..\Librerias\sdl\lib\x86 SDL.lib SDLmain.lib SDL_image.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\Game_VC2010.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\xdcl\Desktop\Nave4\Naves\proyecto\Debug\Game_VC2010.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\xdcl\Desktop\Nave4\Naves\proyecto\Debug\Game_VC2010.lib" /MACHINE:X86 Debug\Frame.obj
          Debug\Game.obj
@@ -28,4 +25,4 @@
 
 Compilación correcta.
 
-Tiempo transcurrido 00:00:03.12
+Tiempo transcurrido 00:00:03.50
