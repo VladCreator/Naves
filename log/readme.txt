@@ -13,3 +13,6 @@ Actividad 3: [3 Sep 2014]:
 Actividad 4: [7 Sep 2014]:
 -Corregir lo que se indica en el codigo
 -Ahora vas a grega la maquina de subestados a cada estado.
+
+Actividadv 5: [11 Sep 2014]:
+-Correger lo que se indica en el codigo

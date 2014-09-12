@@ -44,7 +44,7 @@ void Game::MotorEstados(){
 		if(SDL_PollEvent(&event)) //ACT4: El SDL_PollEvent No debe de ir aqui, probablemente tu Teclado no te funcione, debe de ir en game. Ya que adentro tiene un segundo WHILE
 		{
 			if(event.type == SDL_QUIT) {
-				Estado = SALIR_MOTOR;
+				Estado = SALIR_MOTOR;//ACT5: Primero debes de FINALIZAR y luego SALIR
 			}
 		}
 
@@ -57,28 +57,30 @@ void Game::MotorEstados(){
 			case JUEGO:
 				//CORREGIDO
 				Juego();//ACT4: Este juego ya no debe de ir aqui, debe de ir en su respectivo estado.
-				while(Sub_Estado != SALIR)
+				while(Sub_Estado != SALIR)//ACT5: Un subestado depende de la vida de un estado, por lo que no necesita su propio While.
 				{
 					switch (Sub_Estado)
 					{
 						case  PINTANDO:
 							Pintado();
-							 Sub_Estado = ACTUALIZANDO;
+							 Sub_Estado = ACTUALIZANDO;//ACT5: No es necesario
 							 break;
 						case ACTUALIZANDO:
 							Actualizado();
-							Sub_Estado = SALIR;
+							Sub_Estado = SALIR;//ACT5: No es necesario
 							Estado = JUEGO;
 							break;
 					}
-					Sub_Estado = PINTANDO;
+					Sub_Estado = PINTANDO;//ACT5: No es necesario.
 				}
 				break;
 
 				case FINALIZACION:
 						Finalizacion();
+						///ACT5: Cuando allas finalizado todo, ahora si...sal del juego
 					break;
 		}
+		//ACT5: Aqui puedes agregar que el estado Sub_Estado++, cambie al siguiente. 
 	}
 
 } 
@@ -113,8 +115,8 @@ void Game::Juego()
 		//Upnave.unload();
 		/*int H = Nave.geth();
 		int W = Nave.getw();*/
-
-		/*keys = SDL_GetKeyState(NULL);
+		/* //ACT5: Puedes ir descomentando este codigo haber si funciona el teclado.
+		keys = SDL_GetKeyState(NULL);
 	
 	if(keys[SDLK_UP] && minave.y > 0){minave.y = minave.y - (1);}
 	if(keys[SDLK_DOWN] && minave.y < HEIGHT - H){minave.y = minave.y + (1);}
