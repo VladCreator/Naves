@@ -4,30 +4,29 @@
 #include <SDL.h>
 #include <conio.h> 
 
-#define WIDTH 420
-#define HEIGHT 360
-#define BPP 24
+#define WIDTH 420 /// Crea un archivo llamado Config.h y mete esto
+#define HEIGHT 360 // ---> Confing.h
+#define BPP 24// ---> Confing.h
 
-SDL_Surface *image, *screen;
-SDL_Rect dest;
-Uint8 *keys;
-int background;
-int HNave,WNave;
-int H = 0;
-int W = 0;
+SDL_Surface *image, *screen;// ---> Game.h
+SDL_Rect dest;// ---> Game.h
+Uint8 *keys;// ---> Game.h
+int background;// ---> Game.h
+int HNave,WNave;// ---> Game.h
+int H = 0;// ---> Game.h
+int W = 0;// ---> Game.h
 
-CFrame Upnave;
-CSprite Nave;
-bool salirJuego;
-struct nave{
-	int x,y;
-} minave;
-SDL_Event event;
+CFrame Upnave;// ---> Game.h
+CSprite Nave;// ---> Game.h
+bool salirJuego;// ---> Game.h
+struct nave{// ---> Game.h
+	int x,y;// ---> Game.h
+} minave;// ---> Game.h
+SDL_Event event;// ---> Game.h
 
 Game::Game(void){
 	atexit(SDL_Quit);
 	Estado = ESTADO_INICIALIZACION;
-	Sub_Estado = PINTANDO;
 	minave.x = 50;
 	minave.y = 10;
 }
@@ -59,57 +58,14 @@ void Game::MotorEstados()
 
 		case ESTADO_JUEGO: //JUGAR
 			Juego();
-			switch (Sub_Estado)
-			{
-			case  PINTANDO:
-				Pintado();
-				Sub_Estado = ACTUALIZANDO;
-				break;
-			case ACTUALIZANDO:
-				Actualizado();
-				Estado = ESTADO_JUEGO;
-				Sub_Estado = PINTANDO;
-				break;
-			case SALIR:
-				break;
-			}
+			Pintado();
 			break;
 
 		case ESTADO_TERMINADO: //SALIR
 			salirJuego = true;
 			break;
 		};
-
-		/*
-		switch (Estado)
-		{
-		case ESTADO_INICIALIZACION:
-		Inicializacion();
-		Estado = ESTADO_JUEGO;//Correcto ya que cargas todo, aqui envias al estado JUEGO
-		break;
-		case ESTADO_JUEGO:
-		Juego();
-		//ACT5: Un subestado depende de la vida de un estado, por lo que no necesita su propio While.
-		switch (Sub_Estado)
-		{
-		case  PINTANDO:
-		Pintado();
-		Sub_Estado = ACTUALIZANDO;//ACT5: No es necesario
-		break;
-		case ACTUALIZANDO:
 		Actualizado();
-		Estado = ESTADO_JUEGO;
-		break;
-		}
-		break;
-
-		case ESTADO_FINALIZACION:
-		Finalizacion();
-		break;
-		}
-		Sub_Estado+1;
-		//ACT5: Aqui puedes agregar que el estado Sub_Estado++, cambie al siguiente. 
-		*/
 	}
 }
 
@@ -130,6 +86,7 @@ void Game::Inicializacion()
 		printf("No se ha podido establecer el modo de vídeo: %s\n", SDL_GetError());
 		exit(1);
 	}
+
 	Upnave.load("Nave.bmp");	
 
 	H = Upnave.img ->h;

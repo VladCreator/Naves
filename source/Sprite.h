@@ -11,11 +11,11 @@ private:
 	int nframes;
 	int cont;
 public:
-	CFrame *sprite;
+	CFrame *sprite;///ACT6: Envez de CFrame, vas a llamarlo simplemente image del tipo SDL_Surface*.
 	CSprite(int nf);
 	CSprite();
 	void finalize();
-	void addframe(CFrame frame);
+	void addframe(CFrame frame);//ACT6: Ya no se usa.
 	void selframe(int nf);
 	int frames() {return cont;}
 	void setx(int x) {posx=x;}
@@ -27,7 +27,7 @@ public:
 	int getw() {return sprite[state].img->w;}
 	int geth() {return sprite[state].img->h;}
 	void draw(SDL_Surface *superficie);
-	int colision(CSprite sp);
+	int colision(CSprite sp);//ACT6, vas a usar sprite/imagenes para comparar coliciones.
 
 	//	~CSprite(void);
 };

@@ -7,13 +7,8 @@ class Game
 		ESTADO_INICIALIZACION,
 		ESTADO_JUEGO,
 		ESTADO_FINALIZACION, 
-		ESTADO_TERMINADO};
-
-
-		enum SUBESTADO_JUEGO {
-			ACTUALIZANDO,
-			PINTANDO,
-			SALIR};
+		ESTADO_TERMINADO
+	};
 
 public:
 	Game(void);
@@ -21,8 +16,7 @@ public:
 
 
 	ESTADO Estado;//Bien
-	SUBESTADO_JUEGO Sub_Estado;
-
+	
 	void MotorEstados();
 	void Inicializacion();
 	void Juego();
