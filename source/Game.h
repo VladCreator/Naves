@@ -3,17 +3,17 @@
 class Game
 {
 
-	 enum ESTADO { 
-		 ESTADO_INICIALIZACION,
-		 ESTADO_JUEGO,
-		 ESTADO_FINALIZACION, 
-		 ESTADO_TERMINADO};
+	enum ESTADO { 
+		ESTADO_INICIALIZACION,
+		ESTADO_JUEGO,
+		ESTADO_FINALIZACION, 
+		ESTADO_TERMINADO};
 
 
-	 enum SUBESTADO_JUEGO {
-		 ACTUALIZANDO,
-		 PINTANDO,
-		SALIR};
+		enum SUBESTADO_JUEGO {
+			ACTUALIZANDO,
+			PINTANDO,
+			SALIR};
 
 public:
 	Game(void);
@@ -24,12 +24,12 @@ public:
 	SUBESTADO_JUEGO Sub_Estado;
 
 	void MotorEstados();
-	 void Inicializacion();
-	 void Juego();
-	 void Terminado();
-	 void Finalizacion();
-	 void Pintado();
-	 void Actualizado();
-	 
+	void Inicializacion();
+	void Juego();
+	void Terminado();
+	void Finalizacion();
+	void Pintado();
+	void Actualizado();
+
 };
 

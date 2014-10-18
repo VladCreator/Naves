@@ -15,3 +15,5 @@ proyecto/Naves_VC2010.suo
 *.obj
 proyecto/Debug/Game_VC2010_vlaz.exe
 *.pdb
+/proyecto/Debug/*.obj
+*.obj

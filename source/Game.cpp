@@ -47,65 +47,65 @@ void Game::MotorEstados()
 		if(SDL_PollEvent(&event))
 		{
 			if(event.type == SDL_QUIT) {
-					Estado = ESTADO_FINALIZACION;//ACT5: Primero debes de FINALIZAR y luego SALIR
+				Estado = ESTADO_FINALIZACION;//ACT5: Primero debes de FINALIZAR y luego SALIR
 			}
 		}
 		switch(Estado)
 		{
-				case ESTADO_INICIALIZACION: //INICIALIZAR
-					Inicializacion();
-					Estado = ESTADO_JUEGO;
-				break;
+		case ESTADO_INICIALIZACION: //INICIALIZAR
+			Inicializacion();
+			Estado = ESTADO_JUEGO;
+			break;
 
-				case ESTADO_JUEGO: //JUGAR
-					Juego();
-					switch (Sub_Estado)
-					{
-						case  PINTANDO:
-							Pintado();
-							Sub_Estado = ACTUALIZANDO;
-							 break;
-						case ACTUALIZANDO:
-							Actualizado();
-							Estado = ESTADO_JUEGO;
-							Sub_Estado = PINTANDO;
-							break;
-						case SALIR:
-							break;
-					}
+		case ESTADO_JUEGO: //JUGAR
+			Juego();
+			switch (Sub_Estado)
+			{
+			case  PINTANDO:
+				Pintado();
+				Sub_Estado = ACTUALIZANDO;
 				break;
+			case ACTUALIZANDO:
+				Actualizado();
+				Estado = ESTADO_JUEGO;
+				Sub_Estado = PINTANDO;
+				break;
+			case SALIR:
+				break;
+			}
+			break;
 
-				case ESTADO_TERMINADO: //SALIR
-					salirJuego = true;
-				break;
+		case ESTADO_TERMINADO: //SALIR
+			salirJuego = true;
+			break;
 		};
-		
-/*
+
+		/*
 		switch (Estado)
 		{
-			case ESTADO_INICIALIZACION:
-				Inicializacion();
-				Estado = ESTADO_JUEGO;//Correcto ya que cargas todo, aqui envias al estado JUEGO
-			break;
-			case ESTADO_JUEGO:
-				Juego();
-				//ACT5: Un subestado depende de la vida de un estado, por lo que no necesita su propio While.
-					switch (Sub_Estado)
-					{
-						case  PINTANDO:
-							Pintado();
-							 Sub_Estado = ACTUALIZANDO;//ACT5: No es necesario
-							 break;
-						case ACTUALIZANDO:
-							Actualizado();
-							Estado = ESTADO_JUEGO;
-							break;
-					}
-				break;
+		case ESTADO_INICIALIZACION:
+		Inicializacion();
+		Estado = ESTADO_JUEGO;//Correcto ya que cargas todo, aqui envias al estado JUEGO
+		break;
+		case ESTADO_JUEGO:
+		Juego();
+		//ACT5: Un subestado depende de la vida de un estado, por lo que no necesita su propio While.
+		switch (Sub_Estado)
+		{
+		case  PINTANDO:
+		Pintado();
+		Sub_Estado = ACTUALIZANDO;//ACT5: No es necesario
+		break;
+		case ACTUALIZANDO:
+		Actualizado();
+		Estado = ESTADO_JUEGO;
+		break;
+		}
+		break;
 
-				case ESTADO_FINALIZACION:
-						Finalizacion();
-					break;
+		case ESTADO_FINALIZACION:
+		Finalizacion();
+		break;
 		}
 		Sub_Estado+1;
 		//ACT5: Aqui puedes agregar que el estado Sub_Estado++, cambie al siguiente. 
@@ -116,7 +116,7 @@ void Game::MotorEstados()
 
 void Game::Inicializacion()
 {
-	
+
 	if(SDL_Init(SDL_INIT_VIDEO) < 0)
 	{
 		printf("No se ha podido iniciar SDL: %s\n", SDL_GetError());
@@ -138,14 +138,14 @@ void Game::Inicializacion()
 
 void Game::Juego()
 {
-		Nave.setx(minave.x);
-		Nave.sety(minave.y);
+	Nave.setx(minave.x);
+	Nave.sety(minave.y);
 
-		//SDL_Flip(screen);
+	//SDL_Flip(screen);
 
-		 //ACT5: Puedes ir descomentando este codigo haber si funciona el teclado.
-		keys = SDL_GetKeyState(NULL);
-	
+	//ACT5: Puedes ir descomentando este codigo haber si funciona el teclado.
+	keys = SDL_GetKeyState(NULL);
+
 	if(keys[SDLK_UP] && minave.y > 0){minave.y = minave.y - (1);}
 	if(keys[SDLK_DOWN] && minave.y < HEIGHT - H){minave.y = minave.y + (1);}
 	if(keys[SDLK_LEFT] && minave.x > 0) {minave.x = minave.x - (1);}

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\source\Frame.cpp">
+      <Filter>Codigo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\Game.cpp">
+      <Filter>Codigo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\main.cpp">
+      <Filter>Codigo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\sprite.cpp">
+      <Filter>Codigo</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\source\Frame.h">
+      <Filter>Cabezeras</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\Game.h">
+      <Filter>Cabezeras</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\sprite.h">
+      <Filter>Cabezeras</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Codigo">
+      <UniqueIdentifier>{35717ff4-15da-4694-af08-8a31212d38fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Cabezeras">
+      <UniqueIdentifier>{9add9137-6c99-4248-a3fa-ba1717bed17f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
