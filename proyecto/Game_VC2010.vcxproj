@@ -75,6 +75,7 @@
     <ClInclude Include="..\source\Frame.h" />
     <ClInclude Include="..\source\Game.h" />
     <ClInclude Include="..\Source\sprite.h" />
+    <ClInclude Include="Config.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

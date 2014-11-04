@@ -8,8 +8,6 @@ int done = 0;//ACT5: Esta variable no le asignas valor nunca
 
 int main(int args,char* argv[])
 {
-
-
 	Game *juego = new Game();
 	while(!done)//ACT5: Como nunca cambia el valor, nunca se saldra.
 	{
@@ -17,11 +15,8 @@ int main(int args,char* argv[])
 		{
 		if(event.type == SDL_QUIT) {done = 1;}
 		}*/
-
 		juego ->MotorEstados();
-
 
 	}
 	return 0;
-
 }

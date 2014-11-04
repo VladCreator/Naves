@@ -52,10 +52,11 @@ void CSprite::draw(SDL_Surface *superficie){
 	dest.x = posx;
 	dest.y = posy;
 
-	SDL_BlitSurface(sprite[state].img, NULL, superficie, &dest);
+	//SDL_BlitSurface(sprite[state].img, NULL, superficie, &dest);
+	SDL_BlitSurface(sprite, NULL, superficie, &dest);
 }
 
-int CSprite::colision(CSprite sp)
+int CSprite::colision(SDL_Surface *superficie)
 {
 
 	int w1, h1, w2, h2, x1, x2, y1, y2;
